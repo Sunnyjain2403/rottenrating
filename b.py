@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-x=input()
+x=input("enter the movie(*no letter in capital):")
 page = requests.get('https://www.rottentomatoes.com/m/'+x).text
 soup=BeautifulSoup(page,"html.parser")
 article=soup.find('span',class_='mop-ratings-wrap__percentage').text
